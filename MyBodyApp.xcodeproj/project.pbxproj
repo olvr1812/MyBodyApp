@@ -13,6 +13,15 @@
 		F99B653529B3894A002160A9 /* MyBodyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F99B653329B3894A002160A9 /* MyBodyApp.xcdatamodeld */; };
 		F99B653729B3894B002160A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F99B653629B3894B002160A9 /* Assets.xcassets */; };
 		F99B653A29B3894B002160A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F99B653829B3894B002160A9 /* LaunchScreen.storyboard */; };
+		F99B654B29B3D3AD002160A9 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B654A29B3D3AD002160A9 /* UIColor + Extension.swift */; };
+		F99B654D29B3D3BC002160A9 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B654C29B3D3BC002160A9 /* UIFont + Extension.swift */; };
+		F99B654F29B3D3D4002160A9 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B654E29B3D3D4002160A9 /* UIView + Extension.swift */; };
+		F99B655129B3D3E9002160A9 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B655029B3D3E9002160A9 /* UILabel + Extension.swift */; };
+		F99B655329B3D3F6002160A9 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B655229B3D3F6002160A9 /* UIStackView + Extension.swift */; };
+		F99B655529B3D497002160A9 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B655429B3D497002160A9 /* CloseButton.swift */; };
+		F99B655729B3D4A2002160A9 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B655629B3D4A2002160A9 /* GreenButton.swift */; };
+		F99B655B29B3D4C2002160A9 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B655A29B3D4C2002160A9 /* BrownTextField.swift */; };
+		F99B655D29B3D4D3002160A9 /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B655C29B3D4D3002160A9 /* GreenSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		F99B653629B3894B002160A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F99B653929B3894B002160A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F99B653B29B3894B002160A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99B654A29B3D3AD002160A9 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		F99B654C29B3D3BC002160A9 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		F99B654E29B3D3D4002160A9 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		F99B655029B3D3E9002160A9 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		F99B655229B3D3F6002160A9 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		F99B655429B3D497002160A9 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		F99B655629B3D4A2002160A9 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		F99B655A29B3D4C2002160A9 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		F99B655C29B3D4D3002160A9 /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			children = (
 				F99B654529B38A52002160A9 /* SupportingFiles */,
 				F99B654229B389ED002160A9 /* MainModule */,
+				F99B654729B3D374002160A9 /* Extensions */,
 				F99B654129B389BC002160A9 /* Application */,
 			);
 			path = MyBodyApp;
@@ -105,6 +124,38 @@
 				F99B653829B3894B002160A9 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F99B654729B3D374002160A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F99B654929B3D38E002160A9 /* Universal */,
+				F99B654829B3D384002160A9 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F99B654829B3D384002160A9 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F99B654A29B3D3AD002160A9 /* UIColor + Extension.swift */,
+				F99B654C29B3D3BC002160A9 /* UIFont + Extension.swift */,
+				F99B654E29B3D3D4002160A9 /* UIView + Extension.swift */,
+				F99B655029B3D3E9002160A9 /* UILabel + Extension.swift */,
+				F99B655229B3D3F6002160A9 /* UIStackView + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F99B654929B3D38E002160A9 /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				F99B655429B3D497002160A9 /* CloseButton.swift */,
+				F99B655629B3D4A2002160A9 /* GreenButton.swift */,
+				F99B655A29B3D4C2002160A9 /* BrownTextField.swift */,
+				F99B655C29B3D4D3002160A9 /* GreenSlider.swift */,
+			);
+			path = Universal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +228,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99B655529B3D497002160A9 /* CloseButton.swift in Sources */,
+				F99B654D29B3D3BC002160A9 /* UIFont + Extension.swift in Sources */,
+				F99B655729B3D4A2002160A9 /* GreenButton.swift in Sources */,
 				F99B652F29B3894A002160A9 /* MainViewController.swift in Sources */,
+				F99B655129B3D3E9002160A9 /* UILabel + Extension.swift in Sources */,
 				F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */,
 				F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */,
+				F99B654F29B3D3D4002160A9 /* UIView + Extension.swift in Sources */,
+				F99B655B29B3D4C2002160A9 /* BrownTextField.swift in Sources */,
+				F99B655D29B3D4D3002160A9 /* GreenSlider.swift in Sources */,
+				F99B655329B3D3F6002160A9 /* UIStackView + Extension.swift in Sources */,
 				F99B653529B3894A002160A9 /* MyBodyApp.xcdatamodeld in Sources */,
+				F99B654B29B3D3AD002160A9 /* UIColor + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,6 +30,8 @@
 		F99B656A29B3D893002160A9 /* WorkOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B656929B3D893002160A9 /* WorkOutTableViewCell.swift */; };
 		F99B656E29B3D982002160A9 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F99B656C29B3D982002160A9 /* Roboto-Bold.ttf */; };
 		F99B656F29B3D982002160A9 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F99B656D29B3D982002160A9 /* Roboto-Medium.ttf */; };
+		F9B58F4E29B665CE00D45EEE /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F4D29B665CE00D45EEE /* StatisticViewController.swift */; };
+		F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		F99B656929B3D893002160A9 /* WorkOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutTableViewCell.swift; sourceTree = "<group>"; };
 		F99B656C29B3D982002160A9 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F99B656D29B3D982002160A9 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F9B58F4D29B665CE00D45EEE /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +94,12 @@
 		F99B652929B3894A002160A9 /* MyBodyApp */ = {
 			isa = PBXGroup;
 			children = (
-				F99B654529B38A52002160A9 /* SupportingFiles */,
-				F99B654229B389ED002160A9 /* MainModule */,
-				F99B654729B3D374002160A9 /* Extensions */,
 				F99B654129B389BC002160A9 /* Application */,
+				F9B58F4C29B665B000D45EEE /* NavigationModule */,
+				F99B654229B389ED002160A9 /* MainModule */,
+				F9B58F4929B6656500D45EEE /* StatisticModule */,
+				F99B654729B3D374002160A9 /* Extensions */,
+				F99B654529B38A52002160A9 /* SupportingFiles */,
 			);
 			path = MyBodyApp;
 			sourceTree = "<group>";
@@ -198,6 +204,38 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		F9B58F4929B6656500D45EEE /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F4A29B6657100D45EEE /* Controller */,
+				F9B58F4B29B6657B00D45EEE /* Views */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		F9B58F4A29B6657100D45EEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F4D29B665CE00D45EEE /* StatisticViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9B58F4B29B6657B00D45EEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9B58F4C29B665B000D45EEE /* NavigationModule */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */,
+			);
+			path = NavigationModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +311,7 @@
 				F99B656129B3D7F4002160A9 /* WeatherView.swift in Sources */,
 				F99B655529B3D497002160A9 /* CloseButton.swift in Sources */,
 				F99B654D29B3D3BC002160A9 /* UIFont + Extension.swift in Sources */,
+				F9B58F4E29B665CE00D45EEE /* StatisticViewController.swift in Sources */,
 				F99B656A29B3D893002160A9 /* WorkOutTableViewCell.swift in Sources */,
 				F99B656529B3D81B002160A9 /* WorkOutTableView.swift in Sources */,
 				F99B655729B3D4A2002160A9 /* GreenButton.swift in Sources */,
@@ -286,6 +325,7 @@
 				F99B655F29B3D7E5002160A9 /* CalendarView.swift in Sources */,
 				F99B655B29B3D4C2002160A9 /* BrownTextField.swift in Sources */,
 				F99B655D29B3D4D3002160A9 /* GreenSlider.swift in Sources */,
+				F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */,
 				F99B655329B3D3F6002160A9 /* UIStackView + Extension.swift in Sources */,
 				F99B653529B3894A002160A9 /* MyBodyApp.xcdatamodeld in Sources */,
 				F99B654B29B3D3AD002160A9 /* UIColor + Extension.swift in Sources */,

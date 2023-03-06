@@ -32,6 +32,8 @@
 		F99B656F29B3D982002160A9 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F99B656D29B3D982002160A9 /* Roboto-Medium.ttf */; };
 		F9B58F4E29B665CE00D45EEE /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F4D29B665CE00D45EEE /* StatisticViewController.swift */; };
 		F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */; };
+		F9B58F5329B6671500D45EEE /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F5229B6671500D45EEE /* StatisticTableViewCell.swift */; };
+		F9B58F5529B6672E00D45EEE /* StatisticsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F5429B6672E00D45EEE /* StatisticsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		F99B656D29B3D982002160A9 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F9B58F4D29B665CE00D45EEE /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		F9B58F5229B6671500D45EEE /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		F9B58F5429B6672E00D45EEE /* StatisticsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +228,8 @@
 		F9B58F4B29B6657B00D45EEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F9B58F5129B6670300D45EEE /* Cells */,
+				F9B58F5429B6672E00D45EEE /* StatisticsTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +240,14 @@
 				F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */,
 			);
 			path = NavigationModule;
+			sourceTree = "<group>";
+		};
+		F9B58F5129B6670300D45EEE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F5229B6671500D45EEE /* StatisticTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,9 +336,11 @@
 				F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */,
 				F99B656329B3D80B002160A9 /* CollectionCalendarView.swift in Sources */,
 				F99B654F29B3D3D4002160A9 /* UIView + Extension.swift in Sources */,
+				F9B58F5329B6671500D45EEE /* StatisticTableViewCell.swift in Sources */,
 				F99B655F29B3D7E5002160A9 /* CalendarView.swift in Sources */,
 				F99B655B29B3D4C2002160A9 /* BrownTextField.swift in Sources */,
 				F99B655D29B3D4D3002160A9 /* GreenSlider.swift in Sources */,
+				F9B58F5529B6672E00D45EEE /* StatisticsTableView.swift in Sources */,
 				F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */,
 				F99B655329B3D3F6002160A9 /* UIStackView + Extension.swift in Sources */,
 				F99B653529B3894A002160A9 /* MyBodyApp.xcdatamodeld in Sources */,

@@ -34,6 +34,11 @@
 		F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */; };
 		F9B58F5329B6671500D45EEE /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F5229B6671500D45EEE /* StatisticTableViewCell.swift */; };
 		F9B58F5529B6672E00D45EEE /* StatisticsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F5429B6672E00D45EEE /* StatisticsTableView.swift */; };
+		F9B58F5D29B66B0000D45EEE /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F5C29B66B0000D45EEE /* NewWorkoutViewController.swift */; };
+		F9B58F5F29B66B1900D45EEE /* NewWorkoutNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F5E29B66B1900D45EEE /* NewWorkoutNameView.swift */; };
+		F9B58F6129B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F6029B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift */; };
+		F9B58F6329B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F6229B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift */; };
+		F9B58F6629B66B7C00D45EEE /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B58F6529B66B7C00D45EEE /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		F9B58F4F29B6660300D45EEE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		F9B58F5229B6671500D45EEE /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		F9B58F5429B6672E00D45EEE /* StatisticsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableView.swift; sourceTree = "<group>"; };
+		F9B58F5C29B66B0000D45EEE /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		F9B58F5E29B66B1900D45EEE /* NewWorkoutNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutNameView.swift; sourceTree = "<group>"; };
+		F9B58F6029B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutDateAndRepeatView.swift; sourceTree = "<group>"; };
+		F9B58F6229B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutRepsOrTimerView.swift; sourceTree = "<group>"; };
+		F9B58F6529B66B7C00D45EEE /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		F99B652929B3894A002160A9 /* MyBodyApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9B58F5929B66AD900D45EEE /* NewWorkoutModule */,
 				F99B654129B389BC002160A9 /* Application */,
 				F9B58F4C29B665B000D45EEE /* NavigationModule */,
 				F99B654229B389ED002160A9 /* MainModule */,
@@ -250,6 +261,42 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F9B58F5929B66AD900D45EEE /* NewWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F5B29B66AF400D45EEE /* Controller */,
+				F9B58F5A29B66AEA00D45EEE /* Views */,
+			);
+			path = NewWorkoutModule;
+			sourceTree = "<group>";
+		};
+		F9B58F5A29B66AEA00D45EEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F6429B66B6D00D45EEE /* Subviews */,
+				F9B58F5E29B66B1900D45EEE /* NewWorkoutNameView.swift */,
+				F9B58F6029B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift */,
+				F9B58F6229B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F9B58F5B29B66AF400D45EEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F5C29B66B0000D45EEE /* NewWorkoutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9B58F6429B66B6D00D45EEE /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				F9B58F6529B66B7C00D45EEE /* SliderView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,17 +379,22 @@
 				F99B652F29B3894A002160A9 /* MainViewController.swift in Sources */,
 				F99B656829B3D88B002160A9 /* CalendarCollectionViewCell.swift in Sources */,
 				F99B655129B3D3E9002160A9 /* UILabel + Extension.swift in Sources */,
+				F9B58F6329B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift in Sources */,
 				F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */,
 				F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */,
+				F9B58F6629B66B7C00D45EEE /* SliderView.swift in Sources */,
 				F99B656329B3D80B002160A9 /* CollectionCalendarView.swift in Sources */,
 				F99B654F29B3D3D4002160A9 /* UIView + Extension.swift in Sources */,
 				F9B58F5329B6671500D45EEE /* StatisticTableViewCell.swift in Sources */,
 				F99B655F29B3D7E5002160A9 /* CalendarView.swift in Sources */,
 				F99B655B29B3D4C2002160A9 /* BrownTextField.swift in Sources */,
 				F99B655D29B3D4D3002160A9 /* GreenSlider.swift in Sources */,
+				F9B58F5F29B66B1900D45EEE /* NewWorkoutNameView.swift in Sources */,
 				F9B58F5529B6672E00D45EEE /* StatisticsTableView.swift in Sources */,
 				F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */,
 				F99B655329B3D3F6002160A9 /* UIStackView + Extension.swift in Sources */,
+				F9B58F6129B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift in Sources */,
+				F9B58F5D29B66B0000D45EEE /* NewWorkoutViewController.swift in Sources */,
 				F99B653529B3894A002160A9 /* MyBodyApp.xcdatamodeld in Sources */,
 				F99B654B29B3D3AD002160A9 /* UIColor + Extension.swift in Sources */,
 			);

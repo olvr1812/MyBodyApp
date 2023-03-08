@@ -19,18 +19,21 @@ class NewWorkoutRepsOrTimerView: UIView {
         return view
     }()
     
-    private var setsSlider = SliderView(minVal: 0, maxVal: 10, text: "Sets")
+    private var setsSlider = SliderView(minVal: 0, maxVal: 10, text: "Sets", type: .sets)
     private var chooseLabel = UILabel(text: "Choose repeat or timer")
-    private var repsSlider = SliderView(minVal: 0, maxVal: 10, text: "Reps")
-    private var timerSlider = SliderView(minVal: 0, maxVal: 10, text: "Timer")
+    private var repsSlider = SliderView(minVal: 0, maxVal: 50, text: "Reps", type: .reps)
+    private var timerSlider = SliderView(minVal: 0, maxVal: 600, text: "Timer", type: .timer)
     
     private var stackView = UIStackView()
+    
+    public var (sets, reps, timer) = (0, 0, 0)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setConfig()
         setViews()
         setConstraints()
+        setDelegates()
     }
     
     required init?(coder: NSCoder) {
@@ -53,8 +56,36 @@ class NewWorkoutRepsOrTimerView: UIView {
         addSubview(stackView)
     }
     
+    private func setDelegates() {
+        setsSlider.delegate = self
+        repsSlider.delegate = self
+        timerSlider.delegate = self
+    }
     
 }
+
+//MARK: - SliderViewProtocol
+
+extension NewWorkoutRepsOrTimerView: SliderViewProtocol {
+    func somethingFunc(type: SliderType, value: Int) {
+        switch type {
+        case .sets:
+            sets = value
+        case .reps:
+            reps = value
+            repsSlider.isActive = true
+            timerSlider.isActive = false
+            timer = 0
+        case .timer:
+            timer = value
+            repsSlider.isActive = false
+            timerSlider.isActive = true
+            reps = 0
+        }
+    }
+}
+
+//MARK: - Set Constraints
 
 extension NewWorkoutRepsOrTimerView {
     private func setConstraints() {

@@ -74,7 +74,6 @@ class NewWorkoutDateAndRepeatView: UIView {
         addSubview(dateStack)
         addSubview(repeatStack)
     }
-    
 }
 
 extension NewWorkoutDateAndRepeatView {

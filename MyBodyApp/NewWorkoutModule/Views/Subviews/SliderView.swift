@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol SliderViewProtocol: AnyObject {
+    func somethingFunc(type: SliderType, value: Int)
+}
+
 class SliderView: UIView {
+    
+    weak var delegate: SliderViewProtocol?
     
     private var nameLabel = UILabel(text: "Name",
                                     font: .robotoMedium18(),
@@ -20,8 +26,25 @@ class SliderView: UIView {
     private var labelStack = UIStackView()
     
     private var greenSlider = GreenSlider()
+    private var sliderType: SliderType?
     
     private var viewsStack = UIStackView()
+    
+    public var isActive: Bool = true {
+        didSet {
+            if self.isActive {
+                nameLabel.alpha = 1
+                numberLabel.alpha = 1
+                greenSlider.alpha = 1
+            } else {
+                nameLabel.alpha = 0.5
+                numberLabel.alpha = 0.5
+                greenSlider.alpha = 0.5
+                numberLabel.text = "0"
+                greenSlider.value = 0
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,17 +54,19 @@ class SliderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(minVal: Float, maxVal: Float, text: String) {
+    convenience init(minVal: Float, maxVal: Float, text: String, type: SliderType) {
         self.init()
         greenSlider.minimumValue = minVal
         greenSlider.maximumValue = maxVal
         nameLabel.text = text
         setViews()
         setConstraints()
+        sliderType = type
     }
     
     private func setViews() {
         translatesAutoresizingMaskIntoConstraints = false
+        greenSlider.addTarget(self, action: #selector(setChanges), for: .valueChanged)
         labelStack = UIStackView(arrangedView: [nameLabel, numberLabel],
                                  spacing: 10,
                                  axis: .horizontal)
@@ -52,6 +77,16 @@ class SliderView: UIView {
                                  axis: .vertical)
         
         addSubview(viewsStack)
+    }
+    
+    @objc private func setChanges() {
+        let intValue = Int(greenSlider.value)
+        
+        numberLabel.text = sliderType == .timer ? intValue.getTimeFromSeconds() : "\(intValue)"
+        guard let type = sliderType else { return }
+        delegate?.somethingFunc(type: type, value: intValue)
+        
+        
     }
 }
 

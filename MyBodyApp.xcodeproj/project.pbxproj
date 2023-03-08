@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90BC10829B91688001E584E /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BC10729B91688001E584E /* RealmManager.swift */; };
+		F91D736029B916DB00A3929A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F91D735F29B916DB00A3929A /* Realm */; };
+		F91D736229B916DB00A3929A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F91D736129B916DB00A3929A /* RealmSwift */; };
+		F91D736729B918B900A3929A /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91D736629B918B900A3929A /* WorkoutModel.swift */; };
 		F92DBB7729B9013700CA2CD6 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7629B9013700CA2CD6 /* Int + Extension.swift */; };
 		F92DBB7929B9014000CA2CD6 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7829B9014000CA2CD6 /* Date + Extension.swift */; };
 		F92DBB7E29B9094200CA2CD6 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7D29B9094200CA2CD6 /* SliderTypes.swift */; };
@@ -45,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90BC10729B91688001E584E /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		F91D736629B918B900A3929A /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		F92DBB7629B9013700CA2CD6 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
 		F92DBB7829B9014000CA2CD6 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		F92DBB7D29B9094200CA2CD6 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
@@ -89,12 +95,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91D736229B916DB00A3929A /* RealmSwift in Frameworks */,
+				F91D736029B916DB00A3929A /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F90BC10629B9167B001E584E /* Srvice */ = {
+			isa = PBXGroup;
+			children = (
+				F90BC10729B91688001E584E /* RealmManager.swift */,
+			);
+			path = Srvice;
+			sourceTree = "<group>";
+		};
+		F91D736529B918B100A3929A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F91D736629B918B900A3929A /* WorkoutModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F92DBB7C29B9092F00CA2CD6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +152,7 @@
 				F99B654229B389ED002160A9 /* MainModule */,
 				F9B58F4929B6656500D45EEE /* StatisticModule */,
 				F99B654729B3D374002160A9 /* Extensions */,
+				F90BC10629B9167B001E584E /* Srvice */,
 				F99B654529B38A52002160A9 /* SupportingFiles */,
 			);
 			path = MyBodyApp;
@@ -145,9 +170,9 @@
 		F99B654229B389ED002160A9 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				F91D736529B918B100A3929A /* Model */,
 				F99B654329B389F8002160A9 /* Controller */,
 				F99B654429B389FF002160A9 /* Views */,
-				F99B656629B3D869002160A9 /* Cells */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -163,6 +188,7 @@
 		F99B654429B389FF002160A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F99B656629B3D869002160A9 /* Cells */,
 				F99B655E29B3D7E5002160A9 /* CalendarView.swift */,
 				F99B656029B3D7F3002160A9 /* WeatherView.swift */,
 				F99B656229B3D80B002160A9 /* CollectionCalendarView.swift */,
@@ -330,6 +356,10 @@
 			dependencies = (
 			);
 			name = MyBodyApp;
+			packageProductDependencies = (
+				F91D735F29B916DB00A3929A /* Realm */,
+				F91D736129B916DB00A3929A /* RealmSwift */,
+			);
 			productName = MyBodyApp;
 			productReference = F99B652729B3894A002160A9 /* MyBodyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -358,6 +388,9 @@
 				Base,
 			);
 			mainGroup = F99B651E29B3894A002160A9;
+			packageReferences = (
+				F91D735E29B916DB00A3929A /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = F99B652829B3894A002160A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -411,8 +444,10 @@
 				F9B58F5F29B66B1900D45EEE /* NewWorkoutNameView.swift in Sources */,
 				F9B58F5529B6672E00D45EEE /* StatisticsTableView.swift in Sources */,
 				F92DBB7929B9014000CA2CD6 /* Date + Extension.swift in Sources */,
+				F90BC10829B91688001E584E /* RealmManager.swift in Sources */,
 				F9B58F5029B6660300D45EEE /* MainTabBarController.swift in Sources */,
 				F99B655329B3D3F6002160A9 /* UIStackView + Extension.swift in Sources */,
+				F91D736729B918B900A3929A /* WorkoutModel.swift in Sources */,
 				F9B58F6129B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift in Sources */,
 				F9B58F5D29B66B0000D45EEE /* NewWorkoutViewController.swift in Sources */,
 				F99B653529B3894A002160A9 /* MyBodyApp.xcdatamodeld in Sources */,
@@ -626,6 +661,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F91D735E29B916DB00A3929A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F91D735F29B916DB00A3929A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F91D735E29B916DB00A3929A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		F91D736129B916DB00A3929A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F91D735E29B916DB00A3929A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F99B653329B3894A002160A9 /* MyBodyApp.xcdatamodeld */ = {

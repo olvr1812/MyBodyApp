@@ -63,6 +63,7 @@ class MainViewController: UIViewController {
         
         setViews()
         setConstraints()
+        setDelegates()
     }
     
     override func viewDidLayoutSubviews() {
@@ -79,6 +80,10 @@ class MainViewController: UIViewController {
         view.addSubview(weatherView)
         view.addSubview(titleWorkoutTable)
         view.addSubview(workOutTable)
+    }
+    
+    private func setDelegates() {
+        calendarView.setDelegate(self)
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -126,5 +131,13 @@ extension MainViewController {
             workOutTable.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+}
+
+extension MainViewController: CollectionCalendarViewProtocol {
+    func selectedItem(date: Date) {
+        print(date)
+    }
+    
+    
 }
 

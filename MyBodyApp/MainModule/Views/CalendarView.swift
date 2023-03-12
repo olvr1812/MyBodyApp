@@ -22,6 +22,10 @@ class CalendarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func setDelegate(_ delegate: CollectionCalendarViewProtocol?) {
+        calendarCollectionView.collectionDelegate = delegate
+    }
+    
     private func setViews() {
         backgroundColor = .specialGreen
         layer.cornerRadius = 10

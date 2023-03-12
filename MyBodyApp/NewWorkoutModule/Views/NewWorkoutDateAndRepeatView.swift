@@ -57,7 +57,8 @@ class NewWorkoutDateAndRepeatView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+// MARK: - Private methods
     private func setConfig() {
         translatesAutoresizingMaskIntoConstraints = false
     }
@@ -74,6 +75,18 @@ class NewWorkoutDateAndRepeatView: UIView {
         addSubview(dateStack)
         addSubview(repeatStack)
     }
+
+// MARK: - Public methods
+    
+    public func getDateAndReps() -> (date: Date, reps: Bool) {
+        (datePicker.date, switchRep.isSelected)
+    }
+    
+    public func resetDateAndRepsView() {
+        datePicker.date = Date()
+        switchRep.isOn = true
+    }
+    
 }
 
 extension NewWorkoutDateAndRepeatView {

@@ -156,9 +156,9 @@
 				F99B654229B389ED002160A9 /* MainModule */,
 				F9B58F5929B66AD900D45EEE /* NewWorkoutModule */,
 				F9B58F4929B6656500D45EEE /* StatisticModule */,
+				F90BC10629B9167B001E584E /* Srvice */,
 				F99B654129B389BC002160A9 /* Application */,
 				F99B654729B3D374002160A9 /* Extensions */,
-				F90BC10629B9167B001E584E /* Srvice */,
 				F99B654529B38A52002160A9 /* SupportingFiles */,
 			);
 			path = MyBodyApp;

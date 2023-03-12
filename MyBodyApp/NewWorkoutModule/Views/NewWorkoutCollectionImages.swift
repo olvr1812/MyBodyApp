@@ -25,6 +25,8 @@ class NewWorkoutCollectionImages: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Private methods
+    
     private func setLayout() {
         collectionLayout.minimumInteritemSpacing = 3
     }
@@ -42,6 +44,13 @@ class NewWorkoutCollectionImages: UICollectionView {
         delegate = self
         dataSource = self
     }
+    
+// MARK: - Public Methods
+    
+    public func getImage() -> UIImage? {
+        selectedImage
+    }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout

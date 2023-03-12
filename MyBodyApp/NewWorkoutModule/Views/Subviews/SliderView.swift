@@ -79,6 +79,12 @@ class SliderView: UIView {
         addSubview(viewsStack)
     }
     
+    public func resetValues() {
+        numberLabel.text = "0"
+        greenSlider.value = 0
+        isActive = true
+    }
+    
     @objc private func setChanges() {
         let intValue = Int(greenSlider.value)
         

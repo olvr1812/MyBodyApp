@@ -40,6 +40,8 @@ class NewWorkoutRepsOrTimerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Private methods
+    
     private func setConfig() {
         chooseLabel.textAlignment = .center
         translatesAutoresizingMaskIntoConstraints = false
@@ -60,6 +62,13 @@ class NewWorkoutRepsOrTimerView: UIView {
         setsSlider.delegate = self
         repsSlider.delegate = self
         timerSlider.delegate = self
+    }
+    
+// MARK: - Public methods
+    public func resetRepsOrTimerView() {
+        repsSlider.resetValues()
+        setsSlider.resetValues()
+        timerSlider.resetValues()
     }
     
 }

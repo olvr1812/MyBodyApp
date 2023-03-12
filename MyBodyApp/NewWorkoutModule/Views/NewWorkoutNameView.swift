@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewWorkoutNameView: UIView {
+class NewWorkoutNameView: UIView, UITextFieldDelegate {
     
     private var nameLabel = UILabel(text: "Name")
     
@@ -32,13 +32,6 @@ class NewWorkoutNameView: UIView {
     private func setViews() {
         addSubview(nameLabel)
         addSubview(workoutNameTextField)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let _ = touches.first {
-            self.endEditing(true)
-        }
-        super.touchesBegan(touches, with: event)
     }
     
 }

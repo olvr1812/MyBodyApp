@@ -15,6 +15,7 @@ extension UIViewController {
     
     func addGestures() {
         let tapView = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapView.cancelsTouchesInView = false
         view.addGestureRecognizer(tapView)
         
         let swipeView = UISwipeGestureRecognizer(target: self, action: #selector(dismissKeyboard))

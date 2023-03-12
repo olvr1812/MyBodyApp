@@ -14,6 +14,8 @@
 		F92DBB7729B9013700CA2CD6 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7629B9013700CA2CD6 /* Int + Extension.swift */; };
 		F92DBB7929B9014000CA2CD6 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7829B9014000CA2CD6 /* Date + Extension.swift */; };
 		F92DBB7E29B9094200CA2CD6 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7D29B9094200CA2CD6 /* SliderTypes.swift */; };
+		F933ED9629BDF28400D41521 /* NewWorkoutCollectionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933ED9529BDF28400D41521 /* NewWorkoutCollectionImages.swift */; };
+		F933ED9829BDF2AC00D41521 /* NewWorkoutCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933ED9729BDF2AC00D41521 /* NewWorkoutCollectionCell.swift */; };
 		F9496B6529BDE9300083E883 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */; };
 		F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652A29B3894A002160A9 /* AppDelegate.swift */; };
 		F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652C29B3894A002160A9 /* SceneDelegate.swift */; };
@@ -55,6 +57,8 @@
 		F92DBB7629B9013700CA2CD6 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
 		F92DBB7829B9014000CA2CD6 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		F92DBB7D29B9094200CA2CD6 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
+		F933ED9529BDF28400D41521 /* NewWorkoutCollectionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutCollectionImages.swift; sourceTree = "<group>"; };
+		F933ED9729BDF2AC00D41521 /* NewWorkoutCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutCollectionCell.swift; sourceTree = "<group>"; };
 		F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		F99B652729B3894A002160A9 /* MyBodyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBodyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B652A29B3894A002160A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -321,6 +325,7 @@
 			children = (
 				F9B58F6429B66B6D00D45EEE /* Subviews */,
 				F9B58F5E29B66B1900D45EEE /* NewWorkoutNameView.swift */,
+				F933ED9529BDF28400D41521 /* NewWorkoutCollectionImages.swift */,
 				F9B58F6029B66B3500D45EEE /* NewWorkoutDateAndRepeatView.swift */,
 				F9B58F6229B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift */,
 			);
@@ -339,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				F9B58F6529B66B7C00D45EEE /* SliderView.swift */,
+				F933ED9729BDF2AC00D41521 /* NewWorkoutCollectionCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -442,7 +448,9 @@
 				F99B654F29B3D3D4002160A9 /* UIView + Extension.swift in Sources */,
 				F9B58F5329B6671500D45EEE /* StatisticTableViewCell.swift in Sources */,
 				F92DBB7E29B9094200CA2CD6 /* SliderTypes.swift in Sources */,
+				F933ED9629BDF28400D41521 /* NewWorkoutCollectionImages.swift in Sources */,
 				F99B655F29B3D7E5002160A9 /* CalendarView.swift in Sources */,
+				F933ED9829BDF2AC00D41521 /* NewWorkoutCollectionCell.swift in Sources */,
 				F99B655B29B3D4C2002160A9 /* BrownTextField.swift in Sources */,
 				F99B655D29B3D4D3002160A9 /* GreenSlider.swift in Sources */,
 				F9B58F5F29B66B1900D45EEE /* NewWorkoutNameView.swift in Sources */,

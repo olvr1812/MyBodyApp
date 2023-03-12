@@ -77,8 +77,9 @@ class NewWorkoutViewController: UIViewController {
             RealmManager.shared.saveWorkoutModel(workoutModel)
             workoutModel = WorkoutModel()
             defaultState()
+            presentAlert(title: "Successfully saved", message: nil)
         } else {
-            print("Error woith save")
+            presentAlert(title: "Something wrong", message: "Enter all parametrs")
         }
     }
     

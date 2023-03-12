@@ -78,6 +78,7 @@ class NewWorkoutViewController: UIViewController {
             workoutModel = WorkoutModel()
             defaultState()
             presentAlert(title: "Successfully saved", message: nil)
+            print(Date().getLocaleTimeZone())
         } else {
             presentAlert(title: "Something wrong", message: "Enter all parametrs")
         }

@@ -14,4 +14,10 @@ extension Date {
         let weekday = calendar.component(.weekday, from: self)
         return weekday
     }
+    
+    func getLocaleTimeZone() -> Date {
+        let timeZoneOffset = Double(TimeZone.current.secondsFromGMT(for: self))
+        let localeDate = Calendar.current.date(byAdding: .second, value: Int(timeZoneOffset), to: self) ?? Date()
+        return localeDate
+    }
 }

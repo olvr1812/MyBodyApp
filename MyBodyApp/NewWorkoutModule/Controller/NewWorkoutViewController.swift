@@ -22,6 +22,7 @@ class NewWorkoutViewController: UIViewController {
         setViews()
         setConstraints()
         targets()
+        addGestures()
     }
     
     private func setViews() {

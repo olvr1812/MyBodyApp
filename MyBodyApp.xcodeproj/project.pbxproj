@@ -14,6 +14,7 @@
 		F92DBB7729B9013700CA2CD6 /* Int + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7629B9013700CA2CD6 /* Int + Extension.swift */; };
 		F92DBB7929B9014000CA2CD6 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7829B9014000CA2CD6 /* Date + Extension.swift */; };
 		F92DBB7E29B9094200CA2CD6 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DBB7D29B9094200CA2CD6 /* SliderTypes.swift */; };
+		F9496B6529BDE9300083E883 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */; };
 		F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652A29B3894A002160A9 /* AppDelegate.swift */; };
 		F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652C29B3894A002160A9 /* SceneDelegate.swift */; };
 		F99B652F29B3894A002160A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652E29B3894A002160A9 /* MainViewController.swift */; };
@@ -54,6 +55,7 @@
 		F92DBB7629B9013700CA2CD6 /* Int + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
 		F92DBB7829B9014000CA2CD6 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		F92DBB7D29B9094200CA2CD6 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
+		F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		F99B652729B3894A002160A9 /* MyBodyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBodyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B652A29B3894A002160A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F99B652C29B3894A002160A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				F99B654E29B3D3D4002160A9 /* UIView + Extension.swift */,
 				F99B655029B3D3E9002160A9 /* UILabel + Extension.swift */,
 				F99B655229B3D3F6002160A9 /* UIStackView + Extension.swift */,
+				F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				F9B58F6329B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift in Sources */,
 				F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */,
 				F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */,
+				F9496B6529BDE9300083E883 /* UIViewController + Extension.swift in Sources */,
 				F9B58F6629B66B7C00D45EEE /* SliderView.swift in Sources */,
 				F99B656329B3D80B002160A9 /* CollectionCalendarView.swift in Sources */,
 				F99B654F29B3D3D4002160A9 /* UIView + Extension.swift in Sources */,

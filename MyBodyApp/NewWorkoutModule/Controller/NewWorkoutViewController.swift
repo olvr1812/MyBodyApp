@@ -22,7 +22,7 @@ class NewWorkoutViewController: UIViewController {
         setViews()
         setConstraints()
         targets()
-        setGesture()
+        addGestures()
     }
     
     private func setViews() {
@@ -42,18 +42,6 @@ class NewWorkoutViewController: UIViewController {
     
     @objc private func closeWorkoutController() {
         dismiss(animated: true)
-    }
-    
-    private func setGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        swipe.cancelsTouchesInView = false
-        view.addGestureRecognizer(swipe)
-    }
-    
-    @objc private func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
 

@@ -27,7 +27,7 @@ class WorkOutTableViewCell: UITableViewCell {
     
     private var workoutImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "testWorkout")?.withRenderingMode(.alwaysTemplate)
+        imageView.image = UIImage(named: "biceps")?.withRenderingMode(.alwaysTemplate)
         imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false

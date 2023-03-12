@@ -13,6 +13,7 @@ class NewWorkoutViewController: UIViewController {
     private lazy var closeWorkoutButton: UIButton = CloseButton()
     
     private var newWorkoutNameView = NewWorkoutNameView()
+    private var newWorkoutCollectionImages = NewWorkoutCollectionImages()
     private var newWorkoutDateAndReps = NewWorkoutDateAndRepeatView()
     private var newWorkoutRepsOrTimer = NewWorkoutRepsOrTimerView()
     private var saveButton = GreenButton(text: "SAVE")
@@ -31,6 +32,7 @@ class NewWorkoutViewController: UIViewController {
         view.addSubview(titleNewWorkoutLabel)
         view.addSubview(closeWorkoutButton)
         view.addSubview(newWorkoutNameView)
+        view.addSubview(newWorkoutCollectionImages)
         view.addSubview(newWorkoutDateAndReps)
         view.addSubview(newWorkoutRepsOrTimer)
         view.addSubview(saveButton)
@@ -62,8 +64,13 @@ extension NewWorkoutViewController {
             newWorkoutNameView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 22),
             newWorkoutNameView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22),
             newWorkoutNameView.heightAnchor.constraint(equalToConstant: 56),
+            
+            newWorkoutCollectionImages.topAnchor.constraint(equalTo: newWorkoutNameView.bottomAnchor, constant: 20),
+            newWorkoutCollectionImages.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 22),
+            newWorkoutCollectionImages.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22),
+            newWorkoutCollectionImages.heightAnchor.constraint(equalToConstant: 80),
 
-            newWorkoutDateAndReps.topAnchor.constraint(equalTo: newWorkoutNameView.bottomAnchor, constant: 20),
+            newWorkoutDateAndReps.topAnchor.constraint(equalTo: newWorkoutCollectionImages.bottomAnchor, constant: 20),
             newWorkoutDateAndReps.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 22),
             newWorkoutDateAndReps.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22),
             newWorkoutDateAndReps.heightAnchor.constraint(equalToConstant: 110),

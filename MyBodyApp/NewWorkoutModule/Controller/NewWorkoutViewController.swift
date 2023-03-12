@@ -55,7 +55,7 @@ class NewWorkoutViewController: UIViewController {
         
         workoutModel.workoutDate = newWorkoutDateAndReps.getDateAndReps().date
         workoutModel.workoutRepeat = newWorkoutDateAndReps.getDateAndReps().reps
-        workoutModel.workoutNumberOfDay = newWorkoutDateAndReps.getDateAndReps().date.getWeekDaayNumber()
+        workoutModel.workoutNumberOfDay = newWorkoutDateAndReps.getDateAndReps().date.getWeekdayNumber()
         
         workoutModel.workoutSets = newWorkoutRepsOrTimer.sets
         workoutModel.workoutReps = newWorkoutRepsOrTimer.reps

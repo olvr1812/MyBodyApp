@@ -63,6 +63,11 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         addSubview(numberOfDayLabel)
     }
     
+    public func setDataToCell(numberOfDay: String, weekDay: String) {
+        numberOfDayLabel.text = numberOfDay
+        dayOfWeekLabel.text = weekDay
+    }
+    
 }
 
 extension CalendarCollectionViewCell {

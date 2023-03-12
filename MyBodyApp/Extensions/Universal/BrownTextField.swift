@@ -12,6 +12,7 @@ class BrownTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
+        delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -32,5 +33,14 @@ class BrownTextField: UITextField {
         returnKeyType = .done
         clearButtonMode = .always
         translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+
+extension BrownTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

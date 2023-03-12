@@ -18,6 +18,8 @@ class NewWorkoutViewController: UIViewController {
     private var newWorkoutRepsOrTimer = NewWorkoutRepsOrTimerView()
     private var saveButton = GreenButton(text: "SAVE")
     
+    private var workoutModel = WorkoutModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setViews()
@@ -41,6 +43,8 @@ class NewWorkoutViewController: UIViewController {
     private func targets() {
         closeWorkoutButton.addTarget(self, action: #selector(closeWorkoutController), for: .touchUpInside)
     }
+    
+    
     
     @objc private func closeWorkoutController() {
         dismiss(animated: true)

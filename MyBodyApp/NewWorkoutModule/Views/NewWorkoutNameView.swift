@@ -24,6 +24,9 @@ class NewWorkoutNameView: UIView, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+// MARK: - Private methods
+    
     private func setConfig() {
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -32,6 +35,17 @@ class NewWorkoutNameView: UIView, UITextFieldDelegate {
     private func setViews() {
         addSubview(nameLabel)
         addSubview(workoutNameTextField)
+    }
+    
+// MARK: - Public methods
+    
+    public func getText() -> String {
+        guard let text = workoutNameTextField.text else { return ""}
+        return text
+    }
+    
+    public func resetNameView() {
+        workoutNameTextField.text = ""
     }
     
 }

@@ -18,6 +18,8 @@ class NewWorkoutViewController: UIViewController {
     private var newWorkoutRepsOrTimer = NewWorkoutRepsOrTimerView()
     private var saveButton = GreenButton(text: "SAVE")
     
+    private var workoutModel = WorkoutModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setViews()
@@ -40,10 +42,56 @@ class NewWorkoutViewController: UIViewController {
     
     private func targets() {
         closeWorkoutButton.addTarget(self, action: #selector(closeWorkoutController), for: .touchUpInside)
+        saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
     }
+    
+    private func setModel()  {
+        workoutModel.workoutName = newWorkoutNameView.getText()
+        
+        guard let image = newWorkoutCollectionImages.getImage()?.pngData() else {
+            print("Error with Image")
+            return }
+        workoutModel.workoutImage = image
+        
+        workoutModel.workoutDate = newWorkoutDateAndReps.getDateAndReps().date
+        workoutModel.workoutRepeat = newWorkoutDateAndReps.getDateAndReps().reps
+        workoutModel.workoutNumberOfDay = newWorkoutDateAndReps.getDateAndReps().date.getWeekDaayNumber()
+        
+        workoutModel.workoutSets = newWorkoutRepsOrTimer.sets
+        workoutModel.workoutReps = newWorkoutRepsOrTimer.reps
+        workoutModel.workoutTimer = newWorkoutRepsOrTimer.timer
+    }
+    
+    private func defaultState() {
+        newWorkoutNameView.resetNameView()
+        newWorkoutDateAndReps.resetDateAndRepsView()
+        newWorkoutRepsOrTimer.resetRepsOrTimerView()
+    }
+    
+    private func saveModel() {
+        let text = newWorkoutNameView.getText()
+        let countSymbols = text.filter({ $0.isNumber || $0.isLetter }).count
+        
+        if countSymbols != 0 &&
+            (newWorkoutRepsOrTimer.reps != 0 || newWorkoutRepsOrTimer.timer != 0) {
+            RealmManager.shared.saveWorkoutModel(workoutModel)
+            workoutModel = WorkoutModel()
+            defaultState()
+            presentAlert(title: "Successfully saved", message: nil)
+        } else {
+            presentAlert(title: "Something wrong", message: "Enter all parametrs")
+        }
+    }
+    
+// MARK: - Actions
     
     @objc private func closeWorkoutController() {
         dismiss(animated: true)
+    }
+    
+    @objc private func saveButtonTapped() {
+        setModel()
+        saveModel()
     }
 }
 

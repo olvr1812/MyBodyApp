@@ -18,7 +18,7 @@ class GreenButton: UIButton {
     }
     
     convenience init(text: String = "") {
-        self.init()
+        self.init(type: .system)
         setTitle(text, for: .normal)
         configure()
     }

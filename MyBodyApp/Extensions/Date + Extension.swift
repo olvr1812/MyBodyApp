@@ -9,4 +9,9 @@ import UIKit
 
 extension Date {
     
+    func getWeekDaayNumber() -> Int {
+        let calendar = Calendar.current
+        let weekday = calendar.component(.weekday, from: self)
+        return weekday
+    }
 }

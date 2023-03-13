@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol WorkoutCellProtocol: AnyObject {
+    func startButtonTaped()
+}
+
 class WorkOutTableViewCell: UITableViewCell {
+    
+    weak var mainViewDelegate: WorkoutCellProtocol?
     
     private var backgroundCell: UIView = {
         let cellView = UIView()
@@ -79,9 +85,11 @@ class WorkOutTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        workoutButton.addTarget(self, action: #selector(startTapped), for: .touchUpInside)
         setViews()
         setConstraints()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -102,6 +110,10 @@ class WorkOutTableViewCell: UITableViewCell {
         backgroundCell.addSubview(statistStackView)
     
         contentView.addSubview(workoutButton)
+    }
+    
+    @objc private func startTapped() {
+        mainViewDelegate?.startButtonTaped()
     }
 }
 

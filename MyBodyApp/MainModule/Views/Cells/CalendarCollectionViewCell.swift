@@ -57,8 +57,6 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     private func setViews() {
         layer.cornerRadius = 10
-    
-        
         addSubview(dayOfWeekLabel)
         addSubview(numberOfDayLabel)
     }

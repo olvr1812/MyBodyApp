@@ -84,6 +84,7 @@ class MainViewController: UIViewController {
     
     private func setDelegates() {
         calendarView.setDelegate(self)
+        workOutTable.workoutTableProtocol = self
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -91,6 +92,18 @@ class MainViewController: UIViewController {
         newWorkoutViewController.modalPresentationStyle = .fullScreen
         present(newWorkoutViewController, animated: true)
     }
+}
+
+extension MainViewController: WorkoutCellProtocol {
+    func startButtonTaped() {
+        let startWorkoutViewController = StartWorkoutViewController()
+        startWorkoutViewController.modalPresentationStyle = .fullScreen
+        present(startWorkoutViewController, animated: true)
+    }
+}
+
+extension MainViewController: WorkoutTableProtocol {
+    
 }
 
 extension MainViewController {

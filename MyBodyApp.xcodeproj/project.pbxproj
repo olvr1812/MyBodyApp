@@ -17,6 +17,9 @@
 		F933ED9629BDF28400D41521 /* NewWorkoutCollectionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933ED9529BDF28400D41521 /* NewWorkoutCollectionImages.swift */; };
 		F933ED9829BDF2AC00D41521 /* NewWorkoutCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933ED9729BDF2AC00D41521 /* NewWorkoutCollectionCell.swift */; };
 		F9496B6529BDE9300083E883 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */; };
+		F960FF7229BF910C005D5F42 /* StartWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F960FF7129BF910C005D5F42 /* StartWorkoutViewController.swift */; };
+		F960FF7429BF919D005D5F42 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F960FF7329BF919D005D5F42 /* DetailsView.swift */; };
+		F960FF7729BF9417005D5F42 /* WorkoutParametrs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F960FF7629BF9417005D5F42 /* WorkoutParametrs.swift */; };
 		F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652A29B3894A002160A9 /* AppDelegate.swift */; };
 		F99B652D29B3894A002160A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652C29B3894A002160A9 /* SceneDelegate.swift */; };
 		F99B652F29B3894A002160A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99B652E29B3894A002160A9 /* MainViewController.swift */; };
@@ -60,6 +63,9 @@
 		F933ED9529BDF28400D41521 /* NewWorkoutCollectionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutCollectionImages.swift; sourceTree = "<group>"; };
 		F933ED9729BDF2AC00D41521 /* NewWorkoutCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutCollectionCell.swift; sourceTree = "<group>"; };
 		F9496B6429BDE9300083E883 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		F960FF7129BF910C005D5F42 /* StartWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewController.swift; sourceTree = "<group>"; };
+		F960FF7329BF919D005D5F42 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		F960FF7629BF9417005D5F42 /* WorkoutParametrs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutParametrs.swift; sourceTree = "<group>"; };
 		F99B652729B3894A002160A9 /* MyBodyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBodyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F99B652A29B3894A002160A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F99B652C29B3894A002160A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,40 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F960FF6E29BF90DB005D5F42 /* StartWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				F960FF7029BF90EF005D5F42 /* Controller */,
+				F960FF6F29BF90E9005D5F42 /* Views */,
+			);
+			path = StartWorkoutModule;
+			sourceTree = "<group>";
+		};
+		F960FF6F29BF90E9005D5F42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F960FF7529BF93FE005D5F42 /* Subviews */,
+				F960FF7329BF919D005D5F42 /* DetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F960FF7029BF90EF005D5F42 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F960FF7129BF910C005D5F42 /* StartWorkoutViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F960FF7529BF93FE005D5F42 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				F960FF7629BF9417005D5F42 /* WorkoutParametrs.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		F99B651E29B3894A002160A9 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +192,7 @@
 		F99B652929B3894A002160A9 /* MyBodyApp */ = {
 			isa = PBXGroup;
 			children = (
+				F960FF6E29BF90DB005D5F42 /* StartWorkoutModule */,
 				F9B58F4C29B665B000D45EEE /* NavigationModule */,
 				F99B654229B389ED002160A9 /* MainModule */,
 				F9B58F5929B66AD900D45EEE /* NewWorkoutModule */,
@@ -429,15 +470,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F99B656129B3D7F4002160A9 /* WeatherView.swift in Sources */,
+				F960FF7429BF919D005D5F42 /* DetailsView.swift in Sources */,
 				F99B655529B3D497002160A9 /* CloseButton.swift in Sources */,
 				F99B654D29B3D3BC002160A9 /* UIFont + Extension.swift in Sources */,
 				F9B58F4E29B665CE00D45EEE /* StatisticViewController.swift in Sources */,
+				F960FF7229BF910C005D5F42 /* StartWorkoutViewController.swift in Sources */,
 				F99B656A29B3D893002160A9 /* WorkOutTableViewCell.swift in Sources */,
 				F99B656529B3D81B002160A9 /* WorkOutTableView.swift in Sources */,
 				F99B655729B3D4A2002160A9 /* GreenButton.swift in Sources */,
 				F99B652F29B3894A002160A9 /* MainViewController.swift in Sources */,
 				F99B656829B3D88B002160A9 /* CalendarCollectionViewCell.swift in Sources */,
 				F99B655129B3D3E9002160A9 /* UILabel + Extension.swift in Sources */,
+				F960FF7729BF9417005D5F42 /* WorkoutParametrs.swift in Sources */,
 				F92DBB7729B9013700CA2CD6 /* Int + Extension.swift in Sources */,
 				F9B58F6329B66B4A00D45EEE /* NewWorkoutRepsOrTimerView.swift in Sources */,
 				F99B652B29B3894A002160A9 /* AppDelegate.swift in Sources */,

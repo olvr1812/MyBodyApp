@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol WorkoutTableProtocol: AnyObject {
+    
+}
+
 class WorkOutTableView: UITableView {
     
+    weak var workoutTableProtocol: WorkoutTableProtocol?
     private let cellID = "WorkOutCell"
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -52,6 +57,7 @@ extension WorkOutTableView: UITableViewDataSource {
             print("error")
             return UITableViewCell()
         }
+        cell.mainViewDelegate = workoutTableProtocol as? WorkoutCellProtocol
         return cell
     }
 }
